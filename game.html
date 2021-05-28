@@ -1,0 +1,29 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body background="e.jpeg">
+    <a href="page.html">Back to Main Page</a><br><br>
+    <div ng-app="myapp" ng-controller="controler">
+        <h3 ng-if="isMessage"> You Won</h3>
+        <table border=1>
+            <tr ng-repeat="row in minified.rows">
+                <td ng-repeat="col in row.cols" ng-click="col.isRevealed = false">
+
+                    <img ng-if="col.isRevealed" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/covered.png">
+                    <img ng-if="!col.isRevealed && col.content == 'empty'" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/empty.png">
+                    <img ng-if="!col.isRevealed && col.content == 'mine'" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/mine.png">
+                    <img ng-if="!col.isRevealed && col.content == 1" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-1.png">
+                    <img ng-if="!col.isRevealed && col.content == 2" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-2.png">
+                    <img ng-if="!col.isRevealed && col.content == 3" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-3.png">
+                    <img ng-if="!col.isRevealed && col.content == 4" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-4.png">
+                    <img ng-if="!col.isRevealed && col.content == 5" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-5.png">
+                    <img ng-if="!col.isRevealed && col.content == 6" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-6.png">
+                    <img ng-if="!col.isRevealed && col.content == 7" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-7.png">
+                    <img ng-if="!col.isRevealed && col.content == 8" src="https://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/number-8.png">
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+    <script src="logic.js"></script>
+</body>

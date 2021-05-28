@@ -1,0 +1,13 @@
+
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body background="a.jpeg">
+<h2>Login To access To-Do List, Notes and Minesweeper Game</h2>
+<form ng-app="" name="myForm"><center>
+Email:<input type="email" name="myAddress" ng-model="text">
+<span ng-show="myForm.myAddress.$error.email">Not a vaild address</span><br><br>
+Password:<input type="password" ng-model="pass"><br><br>
+<button onclick="document.location='page.html'">Submit</button><br></center>
+</form>
+</body>
+</html>
